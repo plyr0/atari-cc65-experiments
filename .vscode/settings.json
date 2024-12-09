@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "atari.h": "c",
+        "_antic.h": "c"
+    }
+}
