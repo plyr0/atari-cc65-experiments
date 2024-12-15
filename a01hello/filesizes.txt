@@ -1,0 +1,6 @@
+ 633 hello_cio.xex
+ 677 hello_internal2.xex
+ 724 hello_internal.xex
+ 844 hello_cputs.xex
+1068 hello_puts.xex
+2914 hello_printf.xe
