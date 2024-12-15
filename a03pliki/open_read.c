@@ -12,8 +12,8 @@ int main() {
     if(fptr == -1){
         printf("error");
     } else {
-        while(read(fptr, &c[i], 1)) {
-            i++;
+        while(read(fptr, c + i, 1)) {
+            ++i;
         }
         printf("Data from the file:\n%s", c);
         close(fptr);
