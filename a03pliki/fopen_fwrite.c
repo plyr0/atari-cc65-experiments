@@ -3,15 +3,13 @@
 #include <string.h> // strlen()
 
 int main() {
-    char c[1000];
+    char c[] = "This is hello from fopen_fwrite";
     FILE *fptr;
     unsigned len, result;
 
     if ((fptr = fopen("hello.txt", "w")) == NULL) {
         printf("Error! File cannot be opened.");
     } else {
-        printf("Enter string for to write:\n");
-        scanf("%[^\n]", c);
         len = strlen(c);
         result = fwrite(c, 1, len, fptr);
         if (result != len)

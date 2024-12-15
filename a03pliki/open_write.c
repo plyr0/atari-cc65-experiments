@@ -1,11 +1,11 @@
-#include <unistd.h> // read()
+#include <unistd.h> // write()
 #include <fcntl.h>  // open()
 #include <stdio.h>  // printf()
 #include <conio.h>  // kbhit()
-#include <string.h>
+#include <string.h> // strlen()
 
 int main() {
-    char c[1000];
+    char c[] = "This is hello from open_write!!";
     int fptr;
     unsigned len, result;
 
@@ -13,8 +13,6 @@ int main() {
     if(fptr == -1){
         printf("error");
     } else {
-        printf("Enter string for to write:\n");
-        scanf("%[^\n]", c);
         len = strlen(c);
         result = write(fptr, c, len);
         if(result != len)
