@@ -2,6 +2,7 @@
     "files.associations": {
         "stdio.h": "c",
         "atari.h": "c",
-        "_antic.h": "c"
+        "_antic.h": "c",
+        "fcntl.h": "c"
     }
 }

@@ -1,2 +1,0 @@
-Hello from file!›
-155 new line atascii = › Single right-pointing angle quotation mark ascii
