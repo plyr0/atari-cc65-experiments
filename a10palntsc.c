@@ -1,24 +1,23 @@
 #include <atari.h>
-#include <conio.h>
-
-unsigned char i=0;
+#include <stdio.h>
 
 int main() {
-    while(1){    
-        if(ANTIC.vcount == 0x82){
-            ++i;
-            if(i>10) {
-                cputs("NTSC");
-                goto END;
-            }
-        }
-
-        if(ANTIC.vcount > 0x83){
-            cputs("PAL");
-            goto END;
-        }
+    unsigned char old_nmien = ANTIC.nmien;
+	ANTIC.nmien = 0;
+    while(ANTIC.vcount < 0x82){
+        ANTIC.wsync = 1;
     }
-END:
-    while(!kbhit());
+    ANTIC.wsync = 1;
+    ANTIC.wsync = 1;
+    if(ANTIC.vcount == 0){
+        puts("NTSC");
+    } else {
+        puts("PAL");
+    }
+    ANTIC.nmien = old_nmien;
+
+    OS.ch = 255;
+    while(OS.ch == 255)
+      ;
     return 0;
 }

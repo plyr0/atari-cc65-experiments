@@ -1,9 +1,11 @@
 #include <stdio.h>
-#include <conio.h>
+#include <atari.h>
 
 int main (void)
 {
     printf("Hello, world!");
-    while(!kbhit());
+    OS.ch = 255;
+    while(OS.ch == 255)
+      ;
     return 0;
 }

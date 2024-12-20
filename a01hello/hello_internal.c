@@ -1,5 +1,4 @@
 #include <atari.h>
-#include <conio.h>
 
 void printinternal(unsigned char* mem, char* str);
 
@@ -8,7 +7,9 @@ unsigned char ch, i;
 int main (void)
 {
     printinternal(OS.savmsc, "Hello, world!");
-    while(!kbhit());
+    OS.ch = 255;
+    while(OS.ch == 255)
+      ;
     return 0;
 }
 

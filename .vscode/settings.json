@@ -3,6 +3,7 @@
         "stdio.h": "c",
         "atari.h": "c",
         "_antic.h": "c",
-        "fcntl.h": "c"
+        "fcntl.h": "c",
+        "conio.h": "c"
     }
 }
