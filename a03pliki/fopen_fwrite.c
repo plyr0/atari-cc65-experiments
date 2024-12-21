@@ -1,5 +1,5 @@
+#include <atari.h>
 #include <stdio.h>
-#include <conio.h>  // kbhit()
 #include <string.h> // strlen()
 
 int main() {
@@ -16,6 +16,8 @@ int main() {
             printf("Error writing:%d/%d\n", result, len);
         fclose(fptr);
     }
-    while(!kbhit());
+    OS.ch = 255;
+    while(OS.ch == 255)
+      ;
     return 0;
 }

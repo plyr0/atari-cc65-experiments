@@ -1,7 +1,7 @@
+#include <atari.h>
 #include <unistd.h> // write()
 #include <fcntl.h>  // open()
 #include <stdio.h>  // printf()
-#include <conio.h>  // kbhit()
 #include <string.h> // strlen()
 
 int main() {
@@ -19,6 +19,8 @@ int main() {
             printf("Error writing:%d/%d\n", result, len);
         close(fptr);
     }
-    while(!kbhit());
+    OS.ch = 255;
+    while(OS.ch == 255)
+      ;
     return 0;
 }

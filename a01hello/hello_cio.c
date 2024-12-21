@@ -1,18 +1,18 @@
 #include <atari.h>
 
-#define CIOV ((unsigned int)0xE456)
-#define CHANNEL ((unsigned int)0)
+#define CIOV 0xE456U
+#define CHANNEL ((unsigned char)0)
 
 
 #ifdef __clang__
 void ciov(void){
-    asm volatile ("LDX #%0" : : "i"(CHANNEL * 16));
+    asm volatile ("LDX #%0" : : "i"((unsigned char)(CHANNEL * 16)));
     asm volatile ("JSR %0" : : "i"(CIOV));
     asm volatile ("RTS" : : );
 }
 #else
 void ciov(void){
-    asm("LDX #%b", CHANNEL * 16);
+    asm("LDX #%b", CHANNEL * 16U);
     asm("JSR %w", CIOV);
     asm("RTS");
 }

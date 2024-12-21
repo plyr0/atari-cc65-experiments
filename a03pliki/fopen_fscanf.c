@@ -1,5 +1,5 @@
+#include <atari.h>
 #include <stdio.h>
-#include <conio.h>  // kbhit()
 
 int main() {
     char c[1000];
@@ -11,6 +11,8 @@ int main() {
         printf("Data from the file:\n%s", c);
         fclose(fptr);
     }
-    while(!kbhit());
+    OS.ch = 255;
+    while(OS.ch == 255)
+      ;
     return 0;
 }
