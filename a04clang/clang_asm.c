@@ -16,7 +16,7 @@ int main (void)
     int i = rand();
 
     unsigned char result_const;
-    char result_dyn;
+    char result_dyn, result_dyn2;
     unsigned int result_const_uint;
     int result_dyn_uint;
 
@@ -28,8 +28,16 @@ int main (void)
                   "ADC #2\n" 
                   : "=a"(result_dyn) : "r"(ch));
 
+    asm volatile ("LDA %1\n"
+                  "ADC #2\n"
+                  "STA %0"
+                  : "=r"(result_dyn2) : "r"(ch));
+
     printf("%d %d\n", CONST_BYTE, result_const);
     printf("%d %d\n", ch, result_dyn);
+    printf("%d %d\n", ch, result_dyn2);
+
+
     // printf("%d %d\n", CONST_UINT, result_const_uint);
     // printf("%d %d\n", i, result_dyn_uint);
 
