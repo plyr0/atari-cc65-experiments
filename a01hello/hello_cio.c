@@ -1,8 +1,8 @@
+// Stolen from discord, from Thom Cherryhomes
 #include <atari.h>
 
 #define CIOV 0xE456U
 #define CHANNEL ((unsigned char)0)
-
 
 #ifdef __clang__
 void ciov(void){
