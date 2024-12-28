@@ -1,5 +1,6 @@
 @echo off
 del *.o
+del custom_cio\*.o
 del *.asm
 del *.lab
 del *.lbl

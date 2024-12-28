@@ -6,6 +6,7 @@
         "fcntl.h": "c",
         "conio.h": "c",
         "_atarios.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "custom_cio.h": "c"
     }
 }

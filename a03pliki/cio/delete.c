@@ -1,7 +1,7 @@
 #include <atari.h>
 #include <stdio.h>  // printf()
 #include <stdbool.h>
-#include "custom_cio.h"
+#include "custom_cio/custom_cio.h"
 
 int main() {
     bool result;

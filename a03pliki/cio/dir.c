@@ -1,14 +1,14 @@
 #include <atari.h>
 #include <stdio.h>
 #include <stdint.h>
-#include "custom_cio.h"
+#include "custom_cio/custom_cio.h"
 
 int main() {
     char c[1000];
     int i = 0;
     uint8_t fptr;
 
-    fptr = a_fopen("D1:hello.txt", "R");
+    fptr = a_dir("D1:*.*");
     
     if(fptr == 0xFF){
         printf("error");
