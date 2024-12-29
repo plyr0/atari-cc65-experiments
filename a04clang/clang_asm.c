@@ -43,6 +43,6 @@ int main (void)
 
     OS.ch = 255;
     while(OS.ch == 255)
-      ;
+      asm volatile("");
     return 0;
 }

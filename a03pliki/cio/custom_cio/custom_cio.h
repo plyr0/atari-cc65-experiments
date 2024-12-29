@@ -42,7 +42,7 @@ static uint8_t findFreeIOCB( void );
 #elif defined(__CC65__)
     uint8_t cio( uint8_t A );
 #else
-#error Unkown compiler. Only cc65 and llvm-mos are supported.
+#error Unknown compiler. Only cc65 and llvm-mos are supported.
 #endif
 
 #endif // __CUSTOM_CIO_H

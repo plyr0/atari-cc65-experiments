@@ -11,7 +11,7 @@ int main() {
 #elif defined(__CC65__)
     char c[] = "This is hello from cc65!!";
 #else
-#error Unkown compiler. Only cc65 and llvm-mos are supported.
+#error Unknown compiler. Only cc65 and llvm-mos are supported.
 #endif
 
     uint8_t fptr;

@@ -24,7 +24,7 @@ volatile unsigned char is_vblank_occured;
 #elif defined(__CC65__)
     void waitvblank(void);
 #else
-#error Unkown compiler. Only cc65 and llvm-mos are supported.
+#error Unknown compiler. Only cc65 and llvm-mos are supported.
 #endif
 
 unsigned char antic4_display_list[32] = {
