@@ -7,6 +7,7 @@
 
 unsigned char antic4_display_list[21] = {
     DL_LMS(DL_GRAPHICS1),
+    //DL_LMS(DL_GRAPHICS0),
     0x00,
     0x50,
     DL_GRAPHICS2, 
@@ -51,7 +52,7 @@ int main(void)
             //((unsigned char*)SCREEN_MEM)[i] = (unsigned char)(rand());
             ((unsigned char*)SCREEN_MEM)[i] = i;
         }
-        for(j=0; j<65535U; j++) asm(""); //unistd.h sleep();
+        for(j=0; j<65535U; j++) asm volatile(""); //unistd.h sleep();
     }
 
     return 0;

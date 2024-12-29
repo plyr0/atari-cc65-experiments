@@ -1,3 +1,6 @@
+#include <atari.h>
+#include <stdlib.h>
+#include <string.h>
 #include "custom_cio.h"
 
 // iocb0 = screen, (BASIC: iocb6 = graphics, iocb7 = printer)

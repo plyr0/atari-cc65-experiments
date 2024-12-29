@@ -1,6 +1,6 @@
 @echo off
 del *.o
-del *.asm
+@rem del *.asm
 del *.lab
 del *.lbl
 del *.xex

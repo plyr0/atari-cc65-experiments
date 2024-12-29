@@ -3,11 +3,8 @@
 
 // Original from damosan314 https://github.com/damosan314/roguelike
 
-#include <stdlib.h>
-#include <string.h>
 #include <stdbool.h>
 #include <stdint.h>
-#include <atari.h>
 
 #define CIO_SUCCESS         ((uint8_t)0x01)
 //#define CIO_NO_DEVICE       0x82
