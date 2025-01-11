@@ -25,7 +25,7 @@ unsigned char antic4_display_list[21] = {
     DL_GRAPHICS2, 
     DL_GRAPHICS2, 
     DL_GRAPHICS1, 
-    DL_JVB,
+    DL_JVB,//max 192 linie
     0x00,
     0x40
 };
