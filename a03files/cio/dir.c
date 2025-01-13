@@ -3,25 +3,47 @@
 #include <stdint.h>
 #include "custom_cio/custom_cio.h"
 
-int main() {
-    char c[1000];
-    int i = 0;
-    uint8_t fptr;
+uint8_t fptr;
+int i;
+char buffer[1000];
 
-    fptr = a_dir("D1:*.*");
+void print_file(void);
+void a_getch(void);
+
+int main() {
+
+    printf("List D:*.*\n");
+    fptr = a_dir("D:*.*");
+    print_file();
+    a_fclose(fptr);
+    a_getch();
     
-    if(fptr == 0xFF){
+    printf("List D1:*.*\n");
+    fptr = a_dir("D1:*.*");
+    print_file();
+    a_fclose(fptr);
+    a_getch();
+    
+    return 0;
+}
+
+void print_file()
+{
+    if (fptr == 0xFF) {
         printf("error");
-    } else {
-        while(a_fread(fptr, c + i, 1)) {
+    }
+    else {
+        i = 0;
+        while (a_fread(fptr, buffer + i, 1) > 0) {
             ++i;
         }
-        printf("Data from the file:\n%s", c);
-        a_fclose(fptr);
+        printf("Data from the file:\n%s", buffer);
     }
+}
 
+void a_getch()
+{
     OS.ch = 255;
-    while(OS.ch == 255)
-      ;
-    return 0;
+    while (OS.ch == 255)
+        asm volatile("");
 }
