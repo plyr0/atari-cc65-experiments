@@ -1,0 +1,16 @@
+in developer command prompt for VS2022(requires atl and mfc?):
+git clone https://github.com/llvm-mos/llvm-mos.git
+cd llvm-mos
+cmake -C clang/cmake/caches/MOS.cmake -G Ninja -S llvm -B build -DCMAKE_INSTALL_PREFIX=C:\llvm-mos
+cd build
+ninja
+ninja install
+
+cd..\..
+
+git clone https://github.com/llvm-mos/llvm-mos-sdk.git
+cd llvm-mos-sdk
+cmake -G Ninja -B build -DCMAKE_INSTALL_PREFIX=c:\llvm-mos -DCMAKE_PREFIX_PATH=c:\llvm-mos
+cd build
+ninja
+ninja install

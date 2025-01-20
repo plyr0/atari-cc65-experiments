@@ -4,6 +4,8 @@ https://forums.atariage.com/topic/252474-how-to-detect-sparta-dos/#comment-35078
 http://atariki.krap.pl/index.php/Programowanie:_Jak_stwierdzi%C4%87_obecno%C5%9B%C4%87_SpartaDOS_X_oraz_jego_konfiguracj%C4%99_pami%C4%99ci
 */
 
+/* TODO: C:\cc65\libsrc\atari\dosdetect.s */
+
 #include <stdio.h>
 #include <atari.h>
 #include <peekpoke.h>
