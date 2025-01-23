@@ -13,7 +13,7 @@
 
 int main() {
 	uint8_t pal = ispal();
-	if(GTIA_READ.pal & 0b00001110 == 0b00001110){
+	if((GTIA_READ.pal & 0b00001110) == 0b00001110){
 		printf("GTIA: NTSC\n");
 	} else {
 		printf("GTIA: PAL\n");

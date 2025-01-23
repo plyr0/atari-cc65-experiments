@@ -8,6 +8,7 @@
         "_atarios.h": "c",
         "string.h": "c",
         "custom_cio.h": "c",
-        "stdint.h": "c"
+        "stdint.h": "c",
+        "stdlib.h": "c"
     }
 }

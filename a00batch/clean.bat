@@ -2,7 +2,6 @@
 del *.o
 del *.lab
 del *.lbl
-del *.xex
 del *.xex.elf.s
 del *.xex.elf.asm
 del *.xex.elf.lab
